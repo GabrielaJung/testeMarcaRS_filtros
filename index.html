@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Teste Marca RS" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de Reforço</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="menuzinho">
+            <div class="botaoMenu">
+                <span class="spanMenu">Menu</span>
+            </div>
+        </div>
+    </div>
+    <div class="pesquisaMain">
+        <div class="pesquisaCardsMain">
+            <div class="pesquisaCards">
+                <div id="pesquisa">
+                    <h3>Pesquise os professores e matérias que precisa de um reforço.</h3>
+                    <div class="pesquisaInputsGrid">
+                        <div class="professor">
+                            <label for="professor">Professor</label>
+                            <input type="text" id="inputProfe" name="professor" placeholder="Procure o seu professor" onchange=le()>
+                        </div>
+
+                        <div class="materia">
+                            <label for="materia">Matéria</label>
+                            <input type="text" id="inputMateria" name="materia" placeholder="Procure pela matéria">
+                        </div>
+
+                        <div class="dataInicial">
+                            <label for="dataInicial">A partir do dia</label>
+                            <input type="date" id="inputDataInicial" name="dataInicial" placeholder="Selecione a data inicial" onchange=le()>
+                        </div>
+
+                        <div class="dataFinal">
+                            <label for="dataFinal">Até o dia</label>
+                            <input type="date" id="inputDataFinal" name="dataFinal" placeholder="Selecione a data final">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="cardsMain">
+        <div id="cards">
+
+        </div>
+    </div>  
+    
+    <script src="script.js"></script>
+</body>
+</html>
