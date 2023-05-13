@@ -1,15 +1,15 @@
 const cursos = [
-    { foto: "./assets/perfil.jpg", nomeProfe: "João", materia: "Matemática", cargaHoraria: "40", descricao: "Aulas de matemática básica", dataInicio: "2023-09-01"},
-    { foto: "./assets/perfil.jpg", nomeProfe: "Maria", materia: "História", cargaHoraria: "30", descricao: "Aulas de história do Brasil", dataInicio: "2023-08-15"},
-    { foto: "./assets/perfil.jpg", nomeProfe: "Pedro", materia: "Inglês", cargaHoraria: "50", descricao: "Aulas de inglês intermediário", dataInicio: "2023-09-15"},
-    { foto: "./assets/perfil.jpg", nomeProfe: "Ana", materia: "Ciências", cargaHoraria: "25", descricao: "Descrição do curso de Ciências com a Professora Ana", dataInicio: "2023-09-05" },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Carlos", materia: "Geografia", cargaHoraria: "35", descricao: "Descrição do curso de Geografia com o Professor Carlos", dataInicio: "2023-10-20" },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Mariana", materia: "Artes", cargaHoraria: "20", descricao: "Descrição do curso de Artes com a Professora Mariana", dataInicio: "2023-11-15" },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Ricardo", materia: "Educação Física", cargaHoraria: "30", descricao: "Descrição do curso de Educação Física com o Professor Ricardo", dataInicio: "2023-12-10" },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Paula", materia: "Química", cargaHoraria: "45", descricao: "Descrição do curso de Química com a Professora Paula", dataInicio: "2024-01-05" },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Felipe", materia: "Física", cargaHoraria: "40", descricao: "Descrição do curso de Física com o Professor Felipe", dataInicio: "2024-02-20" },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Sofia", materia: "Literatura", cargaHoraria: "30", descricao: "Descrição do curso de Literatura com a Professora Sofia", dataInicio: "2024-03-15" },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Gabriel", materia: "Programação", cargaHoraria: "50", descricao: "Descrição do curso de Programação com o Professor Gabriel", dataInicio: "2024-04-10" },
+    { foto: "./assets/perfil.jpg", nomeProfe: "João", materia: "Matemática", cargaHoraria: "40", descricao: "Aulas de matemática básica", dataInicio: new Date('2023, 09, 01') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Maria", materia: "História", cargaHoraria: "30", descricao: "Aulas de história do Brasil", dataInicio: new Date('2023-08-15')},
+    { foto: "./assets/perfil.jpg", nomeProfe: "Pedro", materia: "Inglês", cargaHoraria: "50", descricao: "Aulas de inglês intermediário", dataInicio: new Date('2023-09-15')},
+    { foto: "./assets/perfil.jpg", nomeProfe: "Ana", materia: "Ciências", cargaHoraria: "25", descricao: "Descrição do curso de Ciências com a Professora Ana", dataInicio: new Date('2023-09-05') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Carlos", materia: "Geografia", cargaHoraria: "35", descricao: "Descrição do curso de Geografia com o Professor Carlos", dataInicio: new Date('2023-10-20') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Mariana", materia: "Artes", cargaHoraria: "20", descricao: "Descrição do curso de Artes com a Professora Mariana", dataInicio: new Date('2023-11-15') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Ricardo", materia: "Educação Física", cargaHoraria: "30", descricao: "Descrição do curso de Educação Física com o Professor Ricardo", dataInicio: new Date('2023-12-10') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Paula", materia: "Química", cargaHoraria: "45", descricao: "Descrição do curso de Química com a Professora Paula", dataInicio: new Date ('2024-01-05') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Felipe", materia: "Física", cargaHoraria: "40", descricao: "Descrição do curso de Física com o Professor Felipe", dataInicio: new Date('2024-02-20') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Sofia", materia: "Literatura", cargaHoraria: "30", descricao: "Descrição do curso de Literatura com a Professora Sofia", dataInicio: new Date('2024-03-15') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Gabriel", materia: "Programação", cargaHoraria: "50", descricao: "Descrição do curso de Programação com o Professor Gabriel", dataInicio: new Date('2024-04-10') },
 ]
 
 // BUSCA A DIV COM ID #cards DO HTML
@@ -65,7 +65,8 @@ function renderizaCards(cards){
         inicioCurso.textContent = "Data de início:"
         inicioCurso.classList.add('inicioCurso');
         const dataInicio = document.createElement('p');
-        dataInicio.textContent = curso.dataInicio;
+        const dataInicioPadronizada = curso.dataInicio.toLocaleDateString()
+        dataInicio.textContent = dataInicioPadronizada;
         dataInicio.classList.add('dataInicio');
 
 
@@ -86,37 +87,62 @@ renderizaCards(cursos);
 // FUNCTION FILTRAR CARDS
 function filtrarCards(){
 
-    // PEGA O VALOR ESCRITO PELO USUÁRIO NOS INPUTS
+    // PEGA O VALOR ESCRITO OU SELECIONADO PELO USUÁRIO NOS INPUTS
     const inputProfes = document.querySelector('#inputProfe').value;
     const inputMateria = document.querySelector('#inputMateria').value;
+    const inputDataInicial = new Date(document.querySelector('#inputDataInicial').value);
+    const inputDataFinal = new Date(document.querySelector('#inputDataFinal').value);
 
 
     //SE O INPUT ESTIVER VAZIO, RENDERIZA TODOS OS CARDS
-    if(inputProfes == '' && inputMateria == ''){
+    if(inputProfes == '' && inputMateria == ''/* && inputDataInicial == '' && inputDataFinal == ''*/){
         renderizaCards(cursos);
     } else {
         
-        //SE TIVER ALGUM VALOR, FILTRA ESSES VALORES E ARMAZENA EM UMA CONSTANTE
-        const filtroProfes = cursos.filter(curso =>{
+        //SE TIVER ALGUM VALOR, FILTRA ESSES VALORES E ARMAZENA NA CONSTANTE filtroCards
+        const filtroCards = cursos.filter(curso =>{
             
+            // ---------------------------------------------------------------- PROFES
             //TRANSFORMA VALOR DO INPUT E NOME PROFESSOR PARA LOWER CASE
             const inputProfesLower = inputProfes.toLowerCase();
             const objProfeLower = curso.nomeProfe.toLowerCase();
             
-            //AGORA, COM AS MATÉRIAS
+            // ---------------------------------------------------------------- MATÉRIAS
+            //AGORA, COM AS MATÉRIAS PARA LOWER CASE
             const inputMateriaLower = inputMateria.toLowerCase();
             const objMateriaLower = curso.materia.toLowerCase();
+            
+            // ---------------------------------------------------------------- DATAS
+            //BUSCA DATA INICIAL DOS CARDS 
+            const dataCard = curso.dataInicio;
+            console.log(dataCard)
+
+            // PEGA DIA, MES E ANO DA DATA DO OBJETO
+            const dataCardDia = dataCard.getDate();
+            const dataCardMes = dataCard.getMonth();
+            const dataCardAno = dataCard.getFullYear();
+
+            //  PEGA DIA, MES E ANO DA DATA DO INPUT INICIAL
+            const dataInicialDia = inputDataInicial.getDate();
+            const dataInicialMes = inputDataInicial.getMonth();
+            const dataInicialAno = inputDataInicial.getFullYear();     
+            
+            //  PEGA DIA, MES E ANO DA DATA DO INPUT FINAL
+            const dataFinalDia = inputDataFinal.getDate();
+            const dataFinalMes = inputDataFinal.getMonth();
+            const dataFinalAno = inputDataFinal.getFullYear();                 
             
             //VERIFICAÇÕES INPUT INCLUI DADOS? SE SIM, RETORNA APENAS CARDS FILTRADOS
             if(
                 ((objProfeLower.includes(inputProfesLower)) || (inputProfesLower.length == 0)) &&
-                ((objMateriaLower.includes(inputMateriaLower)) || (inputMateriaLower.length == 0))
+                ((objMateriaLower.includes(inputMateriaLower)) || (inputMateriaLower.length == 0))  &&
+                ((dataCardDia >= dataInicialDia && dataCardDia <= dataFinalDia))
             ) return true;  
             
         });
         
-        console.log(filtroProfes)
-        renderizaCards(filtroProfes);
+        console.log(filtroCards)
+        renderizaCards(filtroCards);
         
         // const filtroMaterias = cursos.filter(curso => {
         //     //AGORA, COM AS MATÉRIAS
