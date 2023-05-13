@@ -97,7 +97,7 @@ function filtrarCards(){
     } else {
         
         //SE TIVER ALGUM VALOR, FILTRA ESSES VALORES E ARMAZENA EM UMA CONSTANTE
-        const filtroCards = cursos.filter(curso =>{
+        const filtroProfes = cursos.filter(curso =>{
             
             //TRANSFORMA VALOR DO INPUT E NOME PROFESSOR PARA LOWER CASE
             const inputProfesLower = inputProfes.toLowerCase();
@@ -106,16 +106,31 @@ function filtrarCards(){
             //AGORA, COM AS MATÉRIAS
             const inputMateriaLower = inputMateria.toLowerCase();
             const objMateriaLower = curso.materia.toLowerCase();
-
-            
             
             //VERIFICAÇÕES INPUT INCLUI DADOS? SE SIM, RETORNA APENAS CARDS FILTRADOS
-            if((objProfeLower.includes(inputProfesLower)) || (objMateriaLower.includes(inputMateriaLower))) return true;
+            if(
+                ((objProfeLower.includes(inputProfesLower)) || (inputProfesLower.length == 0)) &&
+                ((objMateriaLower.includes(inputMateriaLower)) || (inputMateriaLower.length == 0))
+            ) return true;  
             
         });
-        console.log(filtroCards)
+        
+        console.log(filtroProfes)
+        renderizaCards(filtroProfes);
+        
+        // const filtroMaterias = cursos.filter(curso => {
+        //     //AGORA, COM AS MATÉRIAS
+        //     const inputMateriaLower = inputMateria.toLowerCase();
+        //     const objMateriaLower = curso.materia.toLowerCase();
+        //     if((objMateriaLower.includes(inputMateriaLower)) || (inputMateriaLower.length == 0)){
+        //         filtrados.push(curso);
+        //         return true;
+        //     }
+        // })
+        
+        //filtrados += filtroMaterias;
+
         //RENDERIZA CARDS FILTRADOS
-        renderizaCards(filtroCards);
     }
 }
 
