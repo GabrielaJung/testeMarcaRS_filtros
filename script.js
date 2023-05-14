@@ -126,7 +126,6 @@ function filtrarCards(){
                 ((inputDataInicial <= dataCard) || (inputDataInicial == "Invalid Date"))  &&
                 ((inputDataFinal >= dataCard) || (inputDataFinal == "Invalid Date"))  
             ) return true;  
-            
         });
         
         renderizaCards(filtroCards);
