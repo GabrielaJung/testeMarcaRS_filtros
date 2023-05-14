@@ -15,13 +15,14 @@ const cursos = [
 // BUSCA A DIV COM ID #cards DO HTML
 const divCards = document.querySelector('#cards');
 
-// RENDERIZA CARDS DINAMICAMENTE
+// FUNÇÃO RENDERIZA CARDS DINAMICAMENTE
 function renderizaCards(cards){
+    // RETIRA TODOS OS ELEMENTOS DA TELA
     divCards.innerHTML = ''
 
     cards.forEach(curso => {
 
-        //CRIANDO DIVS PARA CADA CARD
+        //CRIA DIVS COM CLASSES PARA CADA CARD 
         const card = document.createElement('div');
         card.classList.add('card');
 
@@ -64,12 +65,13 @@ function renderizaCards(cards){
         const inicioCurso = document.createElement('p');
         inicioCurso.textContent = "Data de início:"
         inicioCurso.classList.add('inicioCurso');
+
         const dataInicio = document.createElement('p');
+
+        // .toLocaleString TRANSFORMA FORMATAÇÃO DA  DATA PARA O PADRÃO LOCAL (BRASIL)
         const dataInicioPadronizada = curso.dataInicio.toLocaleDateString()
         dataInicio.textContent = dataInicioPadronizada;
         dataInicio.classList.add('dataInicio');
-
-
 
         //COLOCA CARDS NO HTML
         divImg.append(foto, aulas, cargaHoraria);
@@ -82,9 +84,10 @@ function renderizaCards(cards){
     });
 }
 
+// PRIMEIRA CHAMADA DA FUNÇÃO QUE RENDERIZA TODOS OS CARDS NA TELA INICIALMENTE
 renderizaCards(cursos);
 
-// FUNCTION FILTRAR CARDS
+// FUNÇÃO FILTRAR CARDS
 function filtrarCards(){
 
     // PEGA O VALOR ESCRITO OU SELECIONADO PELO USUÁRIO NOS INPUTS
@@ -94,8 +97,8 @@ function filtrarCards(){
     const inputDataFinal = new Date(document.querySelector('#inputDataFinal').value);
 
 
-    //SE O INPUT ESTIVER VAZIO, RENDERIZA TODOS OS CARDS
-    if(inputProfes == '' && inputMateria == ''/* && inputDataInicial == '' && inputDataFinal == ''*/){
+    //SE TODOS OS INPUTS ESTIVEREM VAZIOS, RENDERIZA TODOS OS CARDS
+    if(inputProfes == '' && inputMateria == '' && inputDataInicial == '' && inputDataFinal == ''){
         renderizaCards(cursos);
     } else {
         
@@ -103,7 +106,7 @@ function filtrarCards(){
         const filtroCards = cursos.filter(curso =>{
             
             // ---------------------------------------------------------------- PROFES
-            //TRANSFORMA VALOR DO INPUT E NOME PROFESSOR PARA LOWER CASE
+            //TRANSFORMA VALOR DO INPUT E NOME PROFESSOR PARA LOWER CASE --> mais fácil verificação
             const inputProfesLower = inputProfes.toLowerCase();
             const objProfeLower = curso.nomeProfe.toLowerCase();
             
@@ -113,60 +116,20 @@ function filtrarCards(){
             const objMateriaLower = curso.materia.toLowerCase();
             
             // ---------------------------------------------------------------- DATAS
-            //BUSCA DATA INICIAL DOS CARDS 
+            //BUSCA DATA INICIAL DOS CARDS DO OBJETO
             const dataCard = curso.dataInicio;
-            console.log(dataCard)
-
-            // PEGA DIA, MES E ANO DA DATA DO OBJETO
-            const dataCardDia = dataCard.getDate();
-            const dataCardMes = dataCard.getMonth();
-            const dataCardAno = dataCard.getFullYear();
-
-            //  PEGA DIA, MES E ANO DA DATA DO INPUT INICIAL
-            const dataInicialDia = inputDataInicial.getDate();
-            const dataInicialMes = inputDataInicial.getMonth();
-            const dataInicialAno = inputDataInicial.getFullYear();     
             
-            //  PEGA DIA, MES E ANO DA DATA DO INPUT FINAL
-            const dataFinalDia = inputDataFinal.getDate();
-            const dataFinalMes = inputDataFinal.getMonth();
-            const dataFinalAno = inputDataFinal.getFullYear();                 
-            
-            //VERIFICAÇÕES INPUT INCLUI DADOS? SE SIM, RETORNA APENAS CARDS FILTRADOS
+            //VERIFICA SE OS INPUTS CONTÉM INFORMAÇÕES DO OBJETO/CARD SE SIM, RETORNA APENAS CARDS FILTRADOS
             if(
                 ((objProfeLower.includes(inputProfesLower)) || (inputProfesLower.length == 0)) &&
-                ((objMateriaLower.includes(inputMateriaLower)) || (inputMateriaLower.length == 0))  &&
-                ((dataCardDia >= dataInicialDia && dataCardDia <= dataFinalDia))
+                ((objMateriaLower.includes(inputMateriaLower)) || (inputMateriaLower.length == 0)) &&
+                ((inputDataInicial <= dataCard) || (inputDataInicial == "Invalid Date"))  &&
+                ((inputDataFinal >= dataCard) || (inputDataFinal == "Invalid Date"))  
             ) return true;  
             
         });
         
-        console.log(filtroCards)
         renderizaCards(filtroCards);
         
-        // const filtroMaterias = cursos.filter(curso => {
-        //     //AGORA, COM AS MATÉRIAS
-        //     const inputMateriaLower = inputMateria.toLowerCase();
-        //     const objMateriaLower = curso.materia.toLowerCase();
-        //     if((objMateriaLower.includes(inputMateriaLower)) || (inputMateriaLower.length == 0)){
-        //         filtrados.push(curso);
-        //         return true;
-        //     }
-        // })
-        
-        //filtrados += filtroMaterias;
-
-        //RENDERIZA CARDS FILTRADOS
     }
 }
-
-
-
-
-
-//pega valor do input e coloca no console---> testes
-// const dataInicial = document.getElementById("inputDataInicial");
-// console.log(dataInicial.value)
-
-// const profe = document.getElementById("inputProfe");
-// console.log(profe.value)
