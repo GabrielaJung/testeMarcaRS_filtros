@@ -132,3 +132,106 @@ function filtrarCards(){
         
     }
 }
+
+
+// BUSCA ELEMENTOS HTML
+const popupContainer = document.querySelector('.popup-container');
+const cardsTela = document.querySelectorAll('.card');
+const fecharPopupBtn = document.querySelector('.fechar-popup');
+
+function popup (){
+    
+    cardsTela.forEach(function (card) {
+        // EVENTO DE CLIQUE PARA ABRIR O POPUP
+        card.addEventListener('click', function(card){    //abrirPopup 
+            console.log(card.target)
+        });
+        
+
+
+        // EVENTO DE CLIQUE PARA FECHAR O POPUP
+        fecharPopupBtn.addEventListener('click', fecharPopup);
+
+        // MOSTRA POPUP
+        function abrirPopup() {
+          popupContainer.style.display = 'flex';  
+        }
+        
+        //ESCONDE POPUP
+        function fecharPopup() {
+          popupContainer.style.display = 'none';  
+        }
+
+    })
+
+}
+
+popup()        
+
+// function renderizaAulas(){
+
+
+//     const
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // // CRIA DIVs
+        // const popupContent = document.createElement('div');
+        // popupContent.classList.add('popup-content');
+        
+        // const botaoFechar = document.createElement('button');
+        // botaoFechar.classList.add('fechar-popup')
+        // const fecharPopupBtn = document.querySelector('.fechar-popup');
+        
+        // // ADICIONA ELEMENTOS HTML
+        // popupContent.append(botaoFechar);
+        // popupContainer.append(popupContent);
+
+
+
