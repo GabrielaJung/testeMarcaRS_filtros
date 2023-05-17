@@ -160,6 +160,13 @@ h3{
     gap: 0.2rem;
 }
 
+.descricao{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número máximo de linhas desejadas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .cargaHoraria{
     display: flex;
     justify-content: center;
@@ -195,11 +202,16 @@ h3{
 }
 
 .popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     background-color: #fff;
     width: 75%;
     box-shadow: 0 1rem 0 0 rgb(55, 48, 163);
     border-radius: 0.5rem;
     text-align: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .fechar-popup{
@@ -217,6 +229,20 @@ h3{
     width:75%;
 }
 
-li{
-    text-decoration: none;
+.foto-perfil-popup{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.conteudo{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+}
+
+.conteudo-descricao{
+    text-align: start;
 }

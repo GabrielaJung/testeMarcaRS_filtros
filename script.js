@@ -1,16 +1,23 @@
 const cursos = [
-    { foto: "./assets/perfil.jpg", nomeProfe: "João", materia: "Matemática", cargaHoraria: "40", descricao: "Aulas de matemática básica", dataInicio: new Date('2023, 09, 01') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Maria", materia: "História", cargaHoraria: "30", descricao: "Aulas de história do Brasil", dataInicio: new Date('2023-08-15')},
-    { foto: "./assets/perfil.jpg", nomeProfe: "Pedro", materia: "Inglês", cargaHoraria: "50", descricao: "Aulas de inglês intermediário", dataInicio: new Date('2023-09-15')},
-    { foto: "./assets/perfil.jpg", nomeProfe: "Ana", materia: "Ciências", cargaHoraria: "25", descricao: "Descrição do curso de Ciências com a Professora Ana", dataInicio: new Date('2023-09-05') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Carlos", materia: "Geografia", cargaHoraria: "35", descricao: "Descrição do curso de Geografia com o Professor Carlos", dataInicio: new Date('2023-10-20') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Mariana", materia: "Artes", cargaHoraria: "20", descricao: "Descrição do curso de Artes com a Professora Mariana", dataInicio: new Date('2023-11-15') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Ricardo", materia: "Educação Física", cargaHoraria: "30", descricao: "Descrição do curso de Educação Física com o Professor Ricardo", dataInicio: new Date('2023-12-10') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Paula", materia: "Química", cargaHoraria: "45", descricao: "Descrição do curso de Química com a Professora Paula", dataInicio: new Date ('2024-01-05') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Felipe", materia: "Física", cargaHoraria: "40", descricao: "Descrição do curso de Física com o Professor Felipe", dataInicio: new Date('2024-02-20') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Sofia", materia: "Literatura", cargaHoraria: "30", descricao: "Descrição do curso de Literatura com a Professora Sofia", dataInicio: new Date('2024-03-15') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Gabriel", materia: "Programação", cargaHoraria: "50", descricao: "Descrição do curso de Programação com o Professor Gabriel", dataInicio: new Date('2024-04-10') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "João", materia: "Matemática", cargaHoraria: "40", descricao: "Aulas de matemática básica Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023, 09, 01') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Maria", materia: "História", cargaHoraria: "30", descricao: "Aulas de história do Brasil Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-08-15')},
+    { foto: "./assets/perfil.jpg", nomeProfe: "Pedro", materia: "Inglês", cargaHoraria: "50", descricao: "Aulas de inglês intermediário Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-09-15')},
+    { foto: "./assets/perfil.jpg", nomeProfe: "Ana", materia: "Ciências", cargaHoraria: "25", descricao: "Descrição do curso de Ciências com a Professora Ana Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-09-05') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Carlos", materia: "Geografia", cargaHoraria: "35", descricao: "Descrição do curso de Geografia com o Professor Carlos Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-10-20') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Mariana", materia: "Artes", cargaHoraria: "20", descricao: "Descrição do curso de Artes com a Professora Mariana Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-11-15') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Ricardo", materia: "Educação Física", cargaHoraria: "30", descricao: "Descrição do curso de Educação Física com o Professor Ricardo Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-12-10') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Paula", materia: "Química", cargaHoraria: "45", descricao: "Descrição do curso de Química com a Professora Paula Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date ('2024-01-05') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Felipe", materia: "Física", cargaHoraria: "40", descricao: "Descrição do curso de Física com o Professor Felipe Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-02-20') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Sofia", materia: "Literatura", cargaHoraria: "30", descricao: "Descrição do curso de Literatura com a Professora Sofia Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-03-15') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "Gabriel", materia: "Programação", cargaHoraria: "50", descricao: "Descrição do curso de Programação com o Professor Gabriel Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-04-10') },
 ]
+
+// BUSCA ELEMENTOS HTML
+const popupContainer = document.querySelector('.popup-container');
+const popupContent = document.querySelector('.popup-content');
+const cardsTela = document.querySelectorAll('.card');
+const fecharPopupBtn = document.querySelector('.fechar-popup');
+const btnConfirmarCurso = document.querySelector('.confirmar-inscricao');
 
 // BUSCA A DIV COM ID #cards DO HTML
 const divCards = document.querySelector('#cards');
@@ -78,6 +85,7 @@ function renderizaCards(cards){
         card.appendChild(divImg);
 
         divElementos.append(nomeProfessor, materia, descricao, inicioCurso, dataInicio);
+        card.setAttribute('onclick', 'abrirPopup(this)')
         card.appendChild(divElementos);
 
         divCards.append(card);
@@ -134,104 +142,70 @@ function filtrarCards(){
 }
 
 
-// BUSCA ELEMENTOS HTML
-const popupContainer = document.querySelector('.popup-container');
-const cardsTela = document.querySelectorAll('.card');
-const fecharPopupBtn = document.querySelector('.fechar-popup');
 
-function popup (){
+
+//ESCONDE POPUP
+function fecharPopup() {
+    popupContainer.style.display = 'none';  
+}
+// MOSTRA POPUP
+function abrirPopup(card){
+    popupContainer.style.display = 'flex'
     
-    cardsTela.forEach(function (card) {
-        // EVENTO DE CLIQUE PARA ABRIR O POPUP
-        card.addEventListener('click', function(card){    //abrirPopup 
-            console.log(card.target)
-        });
-        
-
-
-        // EVENTO DE CLIQUE PARA FECHAR O POPUP
-        fecharPopupBtn.addEventListener('click', fecharPopup);
-
-        // MOSTRA POPUP
-        function abrirPopup() {
-          popupContainer.style.display = 'flex';  
-        }
-        
-        //ESCONDE POPUP
-        function fecharPopup() {
-          popupContainer.style.display = 'none';  
-        }
-
-    })
-
+    
+    renderizaElementos(card);
 }
 
-popup()        
+// ADICIONA INFORMAÇÕES DOS CARDS NO POPUP
 
-// function renderizaAulas(){
+function renderizaElementos(curso){
+    // FOTO PERFIL
+    const fotoPerfilPopup = document.querySelector('.foto-perfil-popup');
+    const foto = curso.querySelector('.cardFoto');
+    fotoPerfilPopup.src = foto.src;
+    
+    // NOME PROFESSOR 
+    const nomeProfePopup = document.querySelector ('.nome-professor');
+    const nome = curso.querySelector('.nomeProfe');
+    nomeProfePopup.textContent = nome.textContent
 
+    // CONTEÚDO DO CURSO
+   const descricaoPopup = document.querySelector('.conteudo-descricao');
+   const descricao = curso.querySelector('.descricao');
+   
+   descricaoPopup.textContent = descricao.textContent;
+}
 
-//     const
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const listaCursos = [];
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // // CRIA DIVs
-        // const popupContent = document.createElement('div');
-        // popupContent.classList.add('popup-content');
+function addCurso(){
+    const descricao = document.querySelector('.conteudo-descricao');
+    
+    // ENCONTRA CURSO COM MESMA DESCRICAO
+    cursos.find(curso => {if(curso.descricao === descricao.textContent){
         
-        // const botaoFechar = document.createElement('button');
-        // botaoFechar.classList.add('fechar-popup')
-        // const fecharPopupBtn = document.querySelector('.fechar-popup');
+        // VERIFICA SE JÁ EXISTE NA LISTA (NÃO PODE REPETIR)
+        if(listaCursos.length === 0){
+            listaCursos.push(curso)
+        }else{
+
+            // LISTA COM TODAS AS DESCRIÇÕES (TODOS OS CURSOS)
+            const listaDescricao = []
+            cursos.forEach(a => listaDescricao.push(a))
+ 
+            if(listaDescricao.includes(curso) && (!(listaCursos.includes(curso)))){
+                listaCursos.push(curso)
+            }
+        }
+        console.log(listaCursos)
         
-        // // ADICIONA ELEMENTOS HTML
-        // popupContent.append(botaoFechar);
-        // popupContainer.append(popupContent);
+    }})
+        
+        
+    
+
+}
 
 
 
