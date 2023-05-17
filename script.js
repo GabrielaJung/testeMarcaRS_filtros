@@ -222,6 +222,7 @@ function renderizaMinhaLista(lista){
         // DD LISTA
         const itemLista = document.createElement('dd');
         itemLista.classList.add('item-lista');
+        itemLista.setAttribute('descricao', item.descricao)
 
         // DIV INFOS-TOTAL
         const infosTotal = document.createElement('div');
@@ -252,6 +253,7 @@ function renderizaMinhaLista(lista){
         const botaoCancelaLista = document.createElement('button');
         botaoCancelaLista.classList.add('btn-cancela-lista');
         botaoCancelaLista.textContent = 'X'
+        botaoCancelaLista.setAttribute('onclick', 'removeElementoLista(this.parentNode)')
 
         // DESCRICAO
         if(descricaoLista.length == 0){
@@ -272,63 +274,26 @@ function renderizaMinhaLista(lista){
         infosTotal.append(fotoLista, divInfos);
         itemLista.append(infosTotal, botaoCancelaLista);
         divLista.appendChild(itemLista);
-        return descricaoLista
+        return descricaoLista        
     })
 // console.log(descricaoLista);
 }
 
 
-/////////////////////////////////////////////////////////////////////TESTES
-// var buttons = document.querySelectorAll(".btn-cancela-lista");
 
-// function handleClick(button) {
-//   console.log("Botão clicado: " + button.innerText);
-// }
+function removeElementoLista(item) {
 
-// for (var i = 0; i < buttons.length; i++) {
-    //   buttons[i].setAttribute("onclick", "handleClick(this)");
-// }
+    //ENCONTRA LISTA DESEJADA PARA REMOVER
+    const index = listaCursos.findIndex(curso => curso.descricao === item.getAttribute('descricao'))
 
-/////////////////////////////////
-// function minhaFuncao() {
-    //     // Lógica da função
-    //     console.log("O elemento foi clicado!");
-    //   }
-// const btnCancelaLista = document.querySelectorAll('.btn-cancela-lista');
-// btnCancelaLista.forEach(btn => {
-//     btn.setAttribute('onclick', "minhaFuncao()");
-// })
-/////////////////////////////////////////////////////////////////////TESTES
+    // RETIRA ITEM DA LISTA ENCONTRADO DO ARRAY DE CURSOS DA MINHA LISTA
+    if(index > -1) listaCursos.splice(index, 1)
 
-
-
-function removeElementoLista(){
-
-
-    // BUSCA ELEMENTO PAI DO HTML
-    const descricao = document.querySelector('.conteudo-descricao');
-    
-    // ENCONTRA CURSO COM MESMA DESCRICAO
-    cursos.find(curso => {if(curso.descricao === descricao.textContent){
-        
-        // VERIFICA SE JÁ EXISTE NA LISTA (NÃO PODE REPETIR)
-        if(listaCursos.length === 0){
-            listaCursos.push(curso)
-        }else{
-
-            // LISTA COM TODAS AS DESCRIÇÕES (TODOS OS CURSOS)
-            const listaDescricao = []
-            cursos.forEach(a => listaDescricao.push(a))
- 
-            if(listaDescricao.includes(curso) && (!(listaCursos.includes(curso)))){
-                listaCursos.pop(curso)
-            }
-        }
-        console.log(listaCursos)
-        
-    }})
-        
+    // RENDERIZA NOVAMENTE A LISTA COM O ARRAY ATUALIZADO 
     renderizaMinhaLista(listaCursos)
-
 }
+
+
+
+
 

@@ -338,6 +338,7 @@ h3{
     border-bottom: solid 0.1rem rgb(108, 114, 136);
     align-items: center;
     padding-right: 0.2rem;
+    transition:  3000ms;
 }
 
 .foto-lista{
@@ -364,4 +365,8 @@ h3{
 .btn-cancela-lista:hover{
     background-color: rgba(199, 210, 254, 1);
     transform: scale(1.1);
+}
+
+.descricao-d-none{
+    display: none;
 }
