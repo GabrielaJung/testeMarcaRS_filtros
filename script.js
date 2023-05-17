@@ -1,15 +1,16 @@
 const cursos = [
-    { foto: "./assets/perfil.jpg", nomeProfe: "João", materia: "Matemática", cargaHoraria: "40", descricao: "Aulas de matemática básica Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023, 09, 01') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Maria", materia: "História", cargaHoraria: "30", descricao: "Aulas de história do Brasil Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-08-15')},
-    { foto: "./assets/perfil.jpg", nomeProfe: "Pedro", materia: "Inglês", cargaHoraria: "50", descricao: "Aulas de inglês intermediário Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-09-15')},
-    { foto: "./assets/perfil.jpg", nomeProfe: "Ana", materia: "Ciências", cargaHoraria: "25", descricao: "Descrição do curso de Ciências com a Professora Ana Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-09-05') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Carlos", materia: "Geografia", cargaHoraria: "35", descricao: "Descrição do curso de Geografia com o Professor Carlos Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-10-20') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Mariana", materia: "Artes", cargaHoraria: "20", descricao: "Descrição do curso de Artes com a Professora Mariana Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-11-15') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Ricardo", materia: "Educação Física", cargaHoraria: "30", descricao: "Descrição do curso de Educação Física com o Professor Ricardo Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-12-10') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Paula", materia: "Química", cargaHoraria: "45", descricao: "Descrição do curso de Química com a Professora Paula Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date ('2024-01-05') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Felipe", materia: "Física", cargaHoraria: "40", descricao: "Descrição do curso de Física com o Professor Felipe Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-02-20') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Sofia", materia: "Literatura", cargaHoraria: "30", descricao: "Descrição do curso de Literatura com a Professora Sofia Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-03-15') },
-    { foto: "./assets/perfil.jpg", nomeProfe: "Gabriel", materia: "Programação", cargaHoraria: "50", descricao: "Descrição do curso de Programação com o Professor Gabriel Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-04-10') },
+    { foto: "./assets/perfil.jpg", nomeProfe: "João", materia: "Matemática", cargaHoraria: "40", descricao: "Aulas de matemática básica Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-09-01, 8:30') },
+    { foto: "./assets/perfil2.jpg", nomeProfe: "Maria", materia: "História", cargaHoraria: "30", descricao: "Aulas de história do Brasil Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-08-15, 9:30')},
+    { foto: "./assets/perfil3.jpg", nomeProfe: "Pedro", materia: "Inglês", cargaHoraria: "50", descricao: "Aulas de inglês intermediário Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-09-15, 10:30')},
+    { foto: "./assets/perfil4.jpg", nomeProfe: "Ana", materia: "Ciências", cargaHoraria: "25", descricao: "Descrição do curso de Ciências com a Professora Ana Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-09-05, 7:30') },
+    { foto: "./assets/perfil5.jpg", nomeProfe: "Carlos", materia: "Geografia", cargaHoraria: "35", descricao: "Descrição do curso de Geografia com o Professor Carlos Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-10-20, 10:00') },
+    { foto: "./assets/perfil6.jpg", nomeProfe: "Mariana", materia: "Artes", cargaHoraria: "20", descricao: "Descrição do curso de Artes com a Professora Mariana Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-11-15, 10:00') },
+    { foto: "./assets/perfil7.jpg", nomeProfe: "Ricardo", materia: "Educação Física", cargaHoraria: "30", descricao: "Descrição do curso de Educação Física com o Professor Ricardo Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2023-12-10, 14:00') },
+    { foto: "./assets/perfil8.jpg", nomeProfe: "Paula", materia: "Química", cargaHoraria: "45", descricao: "Descrição do curso de Química com a Professora Paula Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date ('2024-01-05, 8:00') },
+    { foto: "./assets/perfil9.jpg", nomeProfe: "Felipe", materia: "Física", cargaHoraria: "40", descricao: "Descrição do curso de Física com o Professor Felipe Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-02-20, 9:00') },
+    { foto: "./assets/perfil10.jpg", nomeProfe: "Sofia", materia: "Literatura", cargaHoraria: "30", descricao: "Descrição do curso de Literatura com a Professora Sofia Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-03-15, 8:30') },
+    { foto: "./assets/perfil11.jpg", nomeProfe: "Gabriel", materia: "Programação", cargaHoraria: "50", descricao: "Descrição do curso de Programação com o Professor Gabriel Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-04-10, 10:10') },
+    { foto: "./assets/perfil12.jpg", nomeProfe: "Bumi", materia: "Programação", cargaHoraria: "40", descricao: "Descrição do curso de Programação com o Professor Bumi! Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", dataInicio: new Date('2024-04-10, 10:10') },
 ]
 
 // BUSCA ELEMENTOS HTML
@@ -178,8 +179,10 @@ function renderizaElementos(curso){
 
 const listaCursos = [];
 
-
+// FUNÇÃO ADICIONA CURSO NA LISTA - MINHAS AULAS
 function addCurso(){
+
+    // BUSCA ELEMENTO PAI DO HTML
     const descricao = document.querySelector('.conteudo-descricao');
     
     // ENCONTRA CURSO COM MESMA DESCRICAO
@@ -198,14 +201,134 @@ function addCurso(){
                 listaCursos.push(curso)
             }
         }
+        
+    }})
+        
+    renderizaMinhaLista(listaCursos)
+}
+
+// BUSCA NO HTML A LISTA MINHAS AULAS
+const divLista = document.getElementById('lista-minhas-aulas');
+const descricaoLista = [];
+
+function renderizaMinhaLista(lista){
+
+    // TIRA TODOS OS ELEMENTOS ANTERIORES À ATUALIZAÇÃO PARA QUE NÃO SE REPITAM
+    divLista.innerHTML = ''
+
+    // PASSA POR CADA OBJETO DO ARRAY QUE CONTÉM OS CURSOS ADICIONADOS À LISTA E ADICIONA INFORMAÇÕES 
+    lista.forEach(item => {
+
+        // DD LISTA
+        const itemLista = document.createElement('dd');
+        itemLista.classList.add('item-lista');
+
+        // DIV INFOS-TOTAL
+        const infosTotal = document.createElement('div');
+        infosTotal.classList.add('infos-total-lista');
+
+        // IMAGEM
+        const fotoLista = document.createElement('img');
+        fotoLista.classList.add('foto-lista');
+        fotoLista.src = item.foto;
+
+        // INFORMACOES CURSO
+        const divInfos = document.createElement('div');
+        divInfos.classList.add('div-infos-lista');
+
+        // MATERIA
+        const materiaLista = document.createElement('p');
+        materiaLista.classList.add('materia-lista');
+        materiaLista.textContent = `Matéria: ${item.materia}`;
+
+        // INICIO DO CURSO - DATA E HORA
+        const dataLista = document.createElement('p');
+        dataLista.classList.add('data-lista');
+        const dataCurso = item.dataInicio;
+        dataLista.textContent = `Inicia no dia ${dataCurso.toLocaleDateString()} das ${dataCurso.getHours()}:${dataCurso.getMinutes()} às ${dataCurso.getHours(dataCurso.setHours(dataCurso.getHours()+1))}:${dataCurso.getMinutes()}`;
+        dataCurso.getHours(dataCurso.setHours(dataCurso.getHours()-1));
+        
+        // BOTÃO CANCELAR CURSO
+        const botaoCancelaLista = document.createElement('button');
+        botaoCancelaLista.classList.add('btn-cancela-lista');
+        botaoCancelaLista.textContent = 'X'
+
+        // DESCRICAO
+        if(descricaoLista.length == 0){
+
+            descricaoLista.push(item);
+        } else{
+            const listaDescricao = []
+            cursos.forEach(a => listaDescricao.push(a))
+
+            if(listaDescricao.includes(item) && (!(descricaoLista.includes(item)))){
+                descricaoLista.push(item)
+            }
+        }
+
+
+        // TRAZ ELEMENTOS CRIADOS PARA O HTML
+        divInfos.append(materiaLista, dataLista);
+        infosTotal.append(fotoLista, divInfos);
+        itemLista.append(infosTotal, botaoCancelaLista);
+        divLista.appendChild(itemLista);
+        return descricaoLista
+    })
+// console.log(descricaoLista);
+}
+
+
+/////////////////////////////////////////////////////////////////////TESTES
+// var buttons = document.querySelectorAll(".btn-cancela-lista");
+
+// function handleClick(button) {
+//   console.log("Botão clicado: " + button.innerText);
+// }
+
+// for (var i = 0; i < buttons.length; i++) {
+    //   buttons[i].setAttribute("onclick", "handleClick(this)");
+// }
+
+/////////////////////////////////
+// function minhaFuncao() {
+    //     // Lógica da função
+    //     console.log("O elemento foi clicado!");
+    //   }
+// const btnCancelaLista = document.querySelectorAll('.btn-cancela-lista');
+// btnCancelaLista.forEach(btn => {
+//     btn.setAttribute('onclick', "minhaFuncao()");
+// })
+/////////////////////////////////////////////////////////////////////TESTES
+
+
+
+function removeElementoLista(){
+
+
+    // BUSCA ELEMENTO PAI DO HTML
+    const descricao = document.querySelector('.conteudo-descricao');
+    
+    // ENCONTRA CURSO COM MESMA DESCRICAO
+    cursos.find(curso => {if(curso.descricao === descricao.textContent){
+        
+        // VERIFICA SE JÁ EXISTE NA LISTA (NÃO PODE REPETIR)
+        if(listaCursos.length === 0){
+            listaCursos.push(curso)
+        }else{
+
+            // LISTA COM TODAS AS DESCRIÇÕES (TODOS OS CURSOS)
+            const listaDescricao = []
+            cursos.forEach(a => listaDescricao.push(a))
+ 
+            if(listaDescricao.includes(curso) && (!(listaCursos.includes(curso)))){
+                listaCursos.pop(curso)
+            }
+        }
         console.log(listaCursos)
         
     }})
         
-        
-    
+    renderizaMinhaLista(listaCursos)
 
 }
-
-
 
