@@ -276,7 +276,6 @@ function renderizaMinhaLista(lista){
         divLista.appendChild(itemLista);
         return descricaoLista        
     })
-// console.log(descricaoLista);
 }
 
 
@@ -292,8 +291,3 @@ function removeElementoLista(item) {
     // RENDERIZA NOVAMENTE A LISTA COM O ARRAY ATUALIZADO 
     renderizaMinhaLista(listaCursos)
 }
-
-
-
-
-
